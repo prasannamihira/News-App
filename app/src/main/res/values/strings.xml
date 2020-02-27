@@ -1,0 +1,11 @@
+<resources>
+    <string name="title_topnews_headlines">Top News Headlines</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_results_found">No records found</string>
+
+    <string name="hot_news">HOT NEWS</string>
+    <string name="preference_news">PREFERENCE</string>
+    <string name="profile">PROFILE</string>
+</resources>
