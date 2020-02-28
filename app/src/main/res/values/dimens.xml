@@ -2,6 +2,7 @@
 <resources>
     <!--length-->
     <dimen name="padding_1dp">1dp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
     <dimen name="padding_6dp">6dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="padding_14dp">14dp</dimen>

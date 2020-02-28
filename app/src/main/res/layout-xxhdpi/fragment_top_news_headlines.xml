@@ -8,10 +8,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/top_tool_bar_main" />
+
         <LinearLayout
             android:id="@+id/ll_no_results_found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/layout_title"
             android:layout_centerInParent="true"
             android:orientation="vertical"
             android:visibility="gone">
@@ -35,7 +40,8 @@
             android:layout_marginLeft="@dimen/padding_6dp"
             android:layout_marginTop="@dimen/padding_6dp"
             android:layout_marginRight="@dimen/padding_6dp"
-            android:layout_marginBottom="@dimen/padding_14dp">
+            android:layout_marginBottom="@dimen/padding_14dp"
+            android:layout_below="@id/layout_title">
 
 
             <androidx.core.widget.NestedScrollView

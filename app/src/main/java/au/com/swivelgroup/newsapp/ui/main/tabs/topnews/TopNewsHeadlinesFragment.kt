@@ -12,9 +12,11 @@ import au.com.swivelgroup.newsapp.R
 import au.com.swivelgroup.newsapp.app.App
 import au.com.swivelgroup.newsapp.base.BaseFragment
 import au.com.swivelgroup.newsapp.data.remote.TopNewsHeadlinesResponse
+import au.com.swivelgroup.newsapp.ui.main.MainActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_top_news_headlines.view.*
+import kotlinx.android.synthetic.main.top_tool_bar_main.view.*
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -48,6 +50,8 @@ class TopNewsHeadlinesFragment : BaseFragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_top_news_headlines, container, false)
         view1 = view
+
+        view1.layout_title.tv_title_top.text = "Top News Headlines"
 
         view1.srl_hot_news_headlines.setOnRefreshListener {
             // Initialize a new Runnable
@@ -87,7 +91,7 @@ class TopNewsHeadlinesFragment : BaseFragment() {
                                 topNewsHeadlinesResponse = topNewsHeadlinesVM.dataResponse!!
 
 
-                                Timber.d("pokemon list success")
+                                Timber.d("news list success")
 
                                 // show pokemon items in recycler view
                                 view1.ll_no_results_found?.visibility = View.GONE

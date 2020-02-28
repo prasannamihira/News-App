@@ -19,8 +19,7 @@ class NewsDetailActivity : BaseActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val item = v?.id
-        when (item) {
+        when (v?.id) {
             R.id.fab_news -> {
                 WebViewActivity.url_news = article?.url
                 WebViewActivity.title = article?.source?.name

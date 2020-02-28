@@ -9,12 +9,10 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
             app:contentInsetStart="0dp">
 
             <RelativeLayout
-                android:id="@+id/toolbar_top"
-                android:background="@color/white"
+                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize"
@@ -31,13 +29,15 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/tv_title_top"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="News Title"
                         android:textSize="@dimen/text_16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:layout_centerInParent="true"
-                        android:id="@+id/toolbar_tv_title_top"/>
+                        android:layout_centerInParent="true"/>
 
                 </RelativeLayout>
             </RelativeLayout>
