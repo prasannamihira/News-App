@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import au.com.swivelgroup.newsapp.R
 import au.com.swivelgroup.newsapp.data.remote.Article
+import au.com.swivelgroup.newsapp.ui.main.tabs.topnews.details.NewsDetailActivity
+import au.com.swivelgroup.newsapp.util.DateTimeUtil
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.list_item_hot_news_headline.view.*
 
@@ -28,9 +30,13 @@ class TopNewsHeadlinesAdapter(private val items: Array<Article>) :
         fun bind(item: Article) {
 
             itemView.tv_headline_title.text = item.title
-            itemView.tv_news_description.text = item.description
+            if (!item.publishedAt.isNullOrEmpty()) {
+                var dateDisplay = DateTimeUtil.getFullDateDisplay(item.publishedAt)
+                itemView.tv_publish_date.text = dateDisplay
+            }
+            itemView.tv_author.text = item.author
 
-            if(item.urlToImage != null && item.urlToImage.isNotEmpty()) {
+            if (!item.urlToImage.isNullOrEmpty()) {
                 Glide.with(itemView.context)
                     .load(item.urlToImage)
                     .into(itemView.iv_news_headline)
@@ -40,9 +46,11 @@ class TopNewsHeadlinesAdapter(private val items: Array<Article>) :
 
             itemView.setOnClickListener {
                 val context = itemView.context
-//                val galleryItemIntent = Intent(context, PokemonDetailsActivity::class.java)
+                val galleryItemIntent = Intent(context, NewsDetailActivity::class.java)
 
-//                context.startActivity(galleryItemIntent)
+                NewsDetailActivity.article = item
+
+                context.startActivity(galleryItemIntent)
             }
         }
     }

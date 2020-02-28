@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--length-->
+    <dimen name="padding_1dp">1dp</dimen>
     <dimen name="padding_6dp">6dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
     <dimen name="padding_14dp">14dp</dimen>
@@ -13,5 +14,6 @@
 
     <!--text-->
     <dimen name="text_8sp">8sp</dimen>
+    <dimen name="text_12sp">12sp</dimen>
     <dimen name="text_16sp">16sp</dimen>
 </resources>

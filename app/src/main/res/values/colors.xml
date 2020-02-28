@@ -2,9 +2,10 @@
 <resources>
     <color name="colorPrimary">#57C1E8</color>
     <color name="colorPrimaryDark">#57C1E8</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#57C1E8</color>
     <color name="tab_background">#ffffff</color>
     <color name="tab_indicator_blue">#57C1E8</color>
+    <color name="view_separator">#E8EAEF</color>
 
 
     <color name="transparent">#00000000</color>

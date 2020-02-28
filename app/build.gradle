@@ -33,7 +33,7 @@ android {
             versionNameSuffix "-dev"
             resValue "string", "app_name", "News App(DEV)"
             manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher_dev"
+                    appIcon: "@mipmap/ic_logo"
             ]
         }
         release {
@@ -45,7 +45,7 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [
-                    appIcon: "@mipmap/ic_launcher"
+                    appIcon: "@mipmap/ic_logo"
             ]
         }
     }
