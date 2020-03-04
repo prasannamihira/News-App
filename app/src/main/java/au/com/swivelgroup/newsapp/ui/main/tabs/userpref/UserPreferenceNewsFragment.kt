@@ -120,7 +120,9 @@ class UserPreferenceNewsFragment : BaseFragment(), View.OnClickListener {
     }
 
     /**
-     * fetch user preference news
+     * fetch user preference news by key
+     *
+     * @param key
      */
     private fun fetchUserPreferenceNews(key: String) {
 
@@ -142,7 +144,7 @@ class UserPreferenceNewsFragment : BaseFragment(), View.OnClickListener {
 
                                 Timber.d("news list success")
 
-                                // show pokemon items in recycler view
+                                // show news items in recycler view
                                 view1.ll_no_results_found?.visibility = View.GONE
 
                                 var adapter = newsResponse!!.articles?.let { it1 ->

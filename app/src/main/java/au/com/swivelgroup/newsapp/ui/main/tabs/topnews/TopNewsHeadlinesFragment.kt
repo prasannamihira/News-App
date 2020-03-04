@@ -51,7 +51,7 @@ class TopNewsHeadlinesFragment : BaseFragment() {
         var view =  inflater.inflate(R.layout.fragment_top_news_headlines, container, false)
         view1 = view
 
-        view1.layout_title.tv_title_top.text = "Top News Headlines"
+        view1.layout_title.tv_title_top.text = resources.getString(R.string.top_news_headlines)
 
         view1.srl_hot_news_headlines.setOnRefreshListener {
             // Initialize a new Runnable
@@ -73,6 +73,9 @@ class TopNewsHeadlinesFragment : BaseFragment() {
         return view1
     }
 
+    /**
+     * fetch hot news headlines
+     */
     private fun fetchHotNewsHeadlines() {
 
         subscription.add(

@@ -15,13 +15,18 @@ interface ApiService {
 
     /**
      * fetch news headlines list
+     *
+     * @param apiKey
      */
     @Headers(Config.CONTENT_TYPE_JSON)
     @GET("top-headlines?country=us")
     fun fetchTopNewsHeadlinesList(@Query("apiKey") apiKey: String): Flowable<Response<TopNewsHeadlinesResponse>>
 
     /**
-     * fetch news headlines list
+     * fetch preference news headlines list
+     *
+     * @param apiKey
+     * @param query 
      */
     @Headers(Config.CONTENT_TYPE_JSON)
     @GET("everything?sortBy=popularity")

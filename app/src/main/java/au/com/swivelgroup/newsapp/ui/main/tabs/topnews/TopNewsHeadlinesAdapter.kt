@@ -25,7 +25,6 @@ class TopNewsHeadlinesAdapter(private val items: Array<Article>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
 
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: Article) {
 
@@ -44,6 +43,7 @@ class TopNewsHeadlinesAdapter(private val items: Array<Article>) :
                 itemView.iv_news_headline.visibility = View.GONE
             }
 
+            // news item click
             itemView.setOnClickListener {
                 val context = itemView.context
                 val galleryItemIntent = Intent(context, NewsDetailActivity::class.java)

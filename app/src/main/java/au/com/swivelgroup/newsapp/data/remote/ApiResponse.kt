@@ -1,5 +1,12 @@
 package au.com.swivelgroup.newsapp.data.remote
 
+/**
+ * top new head lines response data
+ *
+ * @param articles
+ * @param status
+ * @param totalResults
+ */
 data class TopNewsHeadlinesResponse(
     val status: String,
     val totalResults: Int,
@@ -29,6 +36,18 @@ data class TopNewsHeadlinesResponse(
     }
 }
 
+/**
+ * article data
+ *
+ * @param author
+ * @param content
+ * @param description
+ * @param publishedAt
+ * @param source
+ * @param title
+ * @param url
+ * @param urlToImage
+ */
 data class Article(
     val source: Source,
     val author: String?,
@@ -40,4 +59,10 @@ data class Article(
     val content: String?
 )
 
+/**
+ * source of news
+ *
+ * @param id
+ * @param name
+ */
 data class Source(val id: String?, val name: String?)

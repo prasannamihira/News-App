@@ -18,22 +18,23 @@ class TopNewsHeadlinesVM @Inject constructor(
 
     var dataResponse: TopNewsHeadlinesResponse? = null
 
+    /**
+     * get news headlines data by api key
+     */
     fun getTopNewsHeadlinesData() =
+
+        // news api call for get top news headlines using api key
         apiService.fetchTopNewsHeadlinesList(apiKey)
             .map {
                 if (it.isSuccessful) {
-
                     dataResponse = it.body()
                     isSuccessResponse = true
-
                 } else {
-
-                    // token error
+                    // error response
                     errorMessage = try {
                         val jObjError = JSONObject(it.errorBody()?.string())
                         var errorMessages = jObjError.getJSONObject("data")
                         errorMessages.getString("message")
-
                     } catch (e: Exception) {
                         e.message.toString()
                     }

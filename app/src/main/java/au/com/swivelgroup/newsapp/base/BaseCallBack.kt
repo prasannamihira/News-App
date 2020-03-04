@@ -1,21 +1,20 @@
 package au.com.swivelgroup.newsapp.base
 
+import androidx.annotation.IntDef
 import au.com.swivelgroup.newsapp.data.model.Status
 
 open class BaseCallBack<T> {
     companion object {
-        const val SUCCESS = 200L
-        const val BAD_REQUEST = 400L
-        const val UNAUTHORIZED_ERROR = 401L
-        const val TOKEN_EXPIRE_ERROR = 402L
-        const val NOT_FOUND = 404L
-        const val UNAUTHORIZED_EMAIL_NOT_IN = 461L
-        const val UNAUTHORIZED_PASSWORD_ERROR = 462L
-        const val UNKNOWN = 472L
+        const val SUCCESS = 200
+        const val BAD_REQUEST = 400
+        const val UNAUTHORIZED_ERROR = 401
+        const val TOKEN_EXPIRE_ERROR = 402
+        const val NOT_FOUND = 404
+        const val UNKNOWN = 472
 
 
         @Retention(AnnotationRetention.SOURCE)
-//        @IntDef(SUCCESS, BAD_REQUEST, UNAUTHORIZED_ERROR, NOT_FOUND,UNAUTHORIZED_EMAIL_NOT_IN,UNAUTHORIZED_PASSWORD_ERROR,UNKNOWN)
+        @IntDef(SUCCESS, BAD_REQUEST, UNAUTHORIZED_ERROR, TOKEN_EXPIRE_ERROR, NOT_FOUND, UNKNOWN)
         annotation class ServerCode
     }
 

@@ -18,17 +18,20 @@ class PreferenceNewsVM @Inject constructor(
 
     var dataResponse: TopNewsHeadlinesResponse? = null
 
+    /**
+     * fetch preference news by key string
+     *
+     * @param query
+     */
     fun getPreferenceNewsData(query: String) =
+        // call news api for get preference news by key string
         apiService.fetchPreferenceNewsList(query, apiKey)
             .map {
                 if (it.isSuccessful) {
-
                     dataResponse = it.body()
                     isSuccessResponse = true
-
                 } else {
-
-                    // token error
+                    // error response
                     errorMessage = try {
                         val jObjError = JSONObject(it.errorBody()?.string())
                         var errorMessages = jObjError.getJSONObject("data")

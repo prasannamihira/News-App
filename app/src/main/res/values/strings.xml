@@ -6,6 +6,7 @@
     <string name="no_results_found">No records found</string>
     <string name="news_category">News Category</string>
 
+    <string name="top_news_headlines">Top News Headlines</string>
     <string name="hot_news">HOT NEWS</string>
     <string name="preference_news">PREFERENCE</string>
     <string name="profile">PROFILE</string>

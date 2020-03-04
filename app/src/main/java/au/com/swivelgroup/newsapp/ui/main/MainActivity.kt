@@ -119,11 +119,11 @@ class MainActivity : BaseActivity() {
      */
     private fun setupViewPager(viewPager: ViewPager?) {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        // 1st tab - Documents
+        // 1st tab - top news headlines
         adapter.insertNewFragment(TopNewsHeadlinesFragment())
-        // 2nd tab - Maintenance
+        // 2nd tab - User preference news
         adapter.insertNewFragment(UserPreferenceNewsFragment())
-        // 3rd tab - Payments, Key documents, lease timeline
+        // 3rd tab - Profile
         adapter.insertNewFragment(ProfileFragment())
 
         viewPager?.adapter = adapter
